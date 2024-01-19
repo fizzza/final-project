@@ -58,6 +58,7 @@ plt.bar(x_values + 2 * bar_width, y3_values, width=bar_width, label='CPI for Unp
 plt.xlabel('Year')
 plt.ylabel('CPI')
 plt.title('Bar Graph showing CPIs')
-plt.legend()  # Show legend
+# Show legend
+plt.legend()
 plt.show()
 
