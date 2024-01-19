@@ -13,10 +13,7 @@ Understanding the trends in CPI for different food items is crucial for consumer
 
 ## Installation
 
-Make sure you have Python and the required libraries installed. You can install the necessary dependencies using the following command:
-
-```bash
-pip install numpy pandas matplotlib
+Make sure you have Python and the required libraries installed: numpy, pandas and matplotlib.
 
 ## Code Structure
 
