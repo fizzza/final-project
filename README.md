@@ -1,5 +1,5 @@
 # final-project
-# CPI Data Visualization Project
+# CPI Data Visualisation Project
 
 This project involves data visualization of Consumer Price Index (CPI) data related to different food categories over time.
 
