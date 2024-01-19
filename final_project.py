@@ -128,3 +128,28 @@ df['CPI for Food, Alcoholic Beverages & Tobacco Goods'].plot(kind='hist', bins=1
 
 plt.tight_layout()
 plt.show()
+
+# Create a DataFrame
+data = {
+    'Year': [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+    'CPI for Food, Alcoholic Beverages & Tobacco Goods': [148, 160, 154, 150, 157, 153, 145, 146, 143, 140, 139, 159, 166, 161],
+    'CPI for Processed Food & Non-Alcoholic Beverages Goods': [58, 64, 62, 58, 61, 60, 56, 57, 55, 54, 54, 62, 64, 69],
+    'CPI for Unprocessed Food Goods': [50, 54, 50, 48, 51, 50, 47, 46, 46, 46, 45, 52, 52, 50]
+}
+
+df = pd.DataFrame(data)
+
+# Create box plots for the second, third, and fourth columns
+fig, axes = plt.subplots(nrows=1, ncols=3, figsize=(15, 5))
+
+df.boxplot(column='CPI for Processed Food & Non-Alcoholic Beverages Goods', ax=axes[0])
+axes[0].set_title('CPI for Processed Food & Non-Alcoholic Beverages Goods Box Plot')
+
+df.boxplot(column='CPI for Unprocessed Food Goods', ax=axes[1])
+axes[1].set_title('CPI for Unprocessed Food Goods Box Plot')
+
+df.boxplot(column='CPI for Food, Alcoholic Beverages & Tobacco Goods', ax=axes[2])
+axes[2].set_title('CPI for Food, Alcoholic Beverages & Tobacco Goods Box Plot')
+
+plt.tight_layout()
+plt.show()
