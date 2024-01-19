@@ -65,6 +65,27 @@ def plot_histograms(df):
             with unittest.mock.patch('sys.argv', ['']):
                 plot_histograms(df)
 
+import unittest
+import unittest.mock
+import pandas as pd
+from final_project import create_dataframe, plot_box_plots  # Ensure the correct function name
+
+
+class TestBoxPlots(unittest.TestCase):
+
+    def test_create_dataframe(self):
+        df = create_dataframe()
+        self.assertIsInstance(df, pd.DataFrame)
+        # Add more specific assertions based on the expected content and structure of the DataFrame
+
+    def test_plot_box_plots(self):
+        df = create_dataframe()
+        # Capture the plot instead of showing it to avoid interference with test execution
+        with self.assertRaises(SystemExit):
+            with unittest.mock.patch('sys.argv', ['']):
+                plot_box_plots(df)
+
+
 
 if __name__ == '__main__':
     unittest.main()
