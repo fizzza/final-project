@@ -153,3 +153,4 @@ axes[2].set_title('CPI for Food, Alcoholic Beverages & Tobacco Goods Box Plot')
 
 plt.tight_layout()
 plt.show()
+
