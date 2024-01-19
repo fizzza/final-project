@@ -73,7 +73,7 @@ y1_values = df.iloc[:, 1]
 y2_values = df.iloc[:, 2]
 y3_values = df.iloc[:, 3]
 
-# Set the bar width (adjust as needed)
+# Set the bar width 
 bar_width = 0.2
 
 # Plot the bar graph
