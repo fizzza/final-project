@@ -17,3 +17,35 @@ Make sure you have Python and the required libraries installed. You can install 
 
 ```bash
 pip install numpy pandas matplotlib
+
+## Code Structure
+
+final_project.py: Python script containing functions for reading data and creating visualisations.
+
+cpi_food.csv: Sample CPI data file.
+
+## Functions
+
+read_data(file_path)
+Reads CPI data from a CSV file.
+
+plot_line_graph(x_values, y_values, xlabel, ylabel, title)
+Plots a line graph to visualize the trends over time.
+
+plot_bar_graph(x_values, y_values_list, labels, xlabel, ylabel, title, bar_width=0.2)
+Plots a bar graph to compare multiple categories over time.
+
+create_dataframe()
+Creates a sample DataFrame for visualization.
+
+plot_histograms(df)
+Plots histograms for different CPI categories, providing a distribution overview.
+
+plot_box_plots(df)
+Plots box plots for different CPI categories, showcasing statistical distributions.
+
+## Data Source
+
+The CPI data used in this project is sourced from The Office of National Statistics, and it represents the CPI values for various food categories over the years 2010 to 2023.
+
+
