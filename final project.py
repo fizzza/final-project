@@ -1,10 +1,36 @@
+# Import Libraries
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-## Read in the data file.
 
-df = pd.read_csv('cpi_food copy.csv')
-df.head()
+def read_data(file_path):
+    df = pd.read_csv(file_path)
+    return df
+
+# Usage
+data_file = 'cpi_food copy.csv'
+df = read_data(data_file)
+print(df.head())
+
+def plot_line_graph(x_values, y_values, xlabel, ylabel, title):
+    plt.plot(x_values, y_values, label='Line Graph')
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.title(title)
+    plt.grid(True)  # Show grid
+    plt.show()
+
+def plot_bar_graph(x_values, y_values_list, labels, xlabel, ylabel, title, bar_width=0.2):
+    for i, y_values in enumerate(y_values_list):
+        plt.bar(x_values + i * bar_width, y_values, width=bar_width, label=labels[i])
+
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.title(title)
+    plt.legend()
+    plt.show()
+
+
 # Assign x-values and y-values
 x_values = df.iloc[:, 0]
 y_values = df.iloc[:, 1]
